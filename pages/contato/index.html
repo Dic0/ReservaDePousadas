@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CABIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+      <h1 class="navbar-title">Cabin</h1>
+      <nav class="navbar-menu">
+        <a href="../menu/index.html"><button type="button">Home</button></a>
+        <a href="../contato/index.html"
+          ><button type="button">Contato</button></a
+        >
+      </nav>
+    </nav>
+    <div class="container">
+      <div class="form">
+        <span class="form__title">Formúlario de Contato</span>
+        <form action="">
+          <div class="form__input">
+            <label class="label">Dados Pessoais</label>
+          </div>
+          <div class="form__input">
+            <i class="ri-user-line"></i>
+            <input type="text" placeholder="Nome" />
+            <span class="bar"></span>
+          </div>
+          <div class="form__input">
+            <i class="ri-mail-line"></i>
+            <input type="text" placeholder="E-mail" />
+            <span class="bar"></span>
+          </div>
+          <div class="form__input">
+            <i class="ri-mail-line"></i>
+            <input type="text" placeholder="Telefone" />
+            <span class="bar"></span>
+          </div>
+          <div class="form__input">
+            <label class="label">Cidade</label>
+          </div>
+          <div class="form__input">
+            <i class="ri-mail-line"></i>
+            <select name="cidade">
+              <option value="valor1">Urubici</option>
+              <option value="valor2">Florianópolis</option>
+              <option value="valor3">Serra Catarinense</option>
+              <option value="valor4">Meia Praia</option>
+              <option value="valor5">Balneário Camboriú</option>
+            </select>
+            <span class="bar"></span>
+          </div>
+          <div class="form__input">
+            <label class="label">Idade</label>
+          </div>
+          <div class="form__input">
+            <i class="ri-lock-line"></i>
+            <input type="text" placeholder="Idade" />x
+            <span class="bar"></span>
+          </div>
+          <div class="form__input">
+            <label class="label">Sexo</label>
+          </div>
+          <div class="form__input">
+            <i class="ri-lock-line"></i>
+            <input type="radio" name="grupo1" value="masculino" /><label>
+              Masculino</label
+            >
+            <input type="radio" name="grupo1" value="feminino" /><label>
+              Feminino</label
+            >
+            <span class="bar"></span>
+          </div>
+          <div class="form__input">
+            <label class="label">Motivo do Contato</label>
+          </div>
+          <div class="form__input">
+            <i class="ri-lock-line"></i>
+
+            <select name="Motivo">
+              <option value="valor1">Duvida</option>
+              <option value="valor2">Elogio</option>
+              <option value="valor3">Outro</option>
+            </select>
+            <span class="bar"></span>
+          </div>
+          <div class="form__input">
+            <label class="label">Escreva seu Motivo</label>
+          </div>
+          <div class="form__input">
+            <i class="ri-lock-line"></i>
+            <textarea id="story" name="story" rows="5" cols="33"> </textarea>
+          </div>
+          <button type="submit" class="form__button">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top">
+          <div class="company__info">
+            <h2 class="company__logo">Cabin</h2>
+            <p class="company__description">
+              Nossa paixão é atender, nosso desafio é melhorar sempre e nossa
+              satisfação é ver nossos Hóspedes felizes!❤️
+            </p>
+            <span class="copyright"
+              >&copy;2022 Todos os direitos reservados á Cabin</span
+            >
+          </div>
+          <div>
+            <h6 class="footer__title">Alunos</h6>
+            <ul class="footer__list">
+              <li class="footer__list-item">Matheus</li>
+              <li class="footer__list-item">Dieric</li>
+
+              <li class="footer__list-item">Heloisa</li>
+              <li class="footer__list-item">Yasmin</li>
+
+              <li class="footer__list-item">Bruno</li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="footer__title">Curso Técnico</h6>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a
+                  href="https://www.ifsc.edu.br/tecnicos2023?utm_source=google&utm_medium=search&gclid=Cj0KCQiAvqGcBhCJARIsAFQ5ke61Uw5-8EY4uK0bK7hrJsPuXbEPPj-K7AMvIBaLYefJDbpNnC3Hlp8aAkLcEALw_wcB"
+                  >Infórmatica</a
+                >
+              </li>
+              <li class="footer__list-item">
+                <a
+                  href="https://www.ifsc.edu.br/tecnicos2023?utm_source=google&utm_medium=search&gclid=Cj0KCQiAvqGcBhCJARIsAFQ5ke61Uw5-8EY4uK0bK7hrJsPuXbEPPj-K7AMvIBaLYefJDbpNnC3Hlp8aAkLcEALw_wcB"
+                  >IFSC</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="footer__title">Data de desenvolvimento</h6>
+            <ul class="footer__list">
+              <li class="footer__list-item">01 de dezembro de 2022</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./main.js"></script>
+
+    <!--conexão com o banco de dados-->
+    <script src="index.js"></script>
+    <script src="validations.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth-compat.js"></script>
+
+    <!--configurações do nosso banco-->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDDOntBgyCQ_I4aIF60hfx2sKTN0L27dmc",
+        authDomain: "cadastro1-a4cf8.firebaseapp.com",
+        projectId: "cadastro1-a4cf8",
+        storageBucket: "cadastro1-a4cf8.appspot.com",
+        messagingSenderId: "608282973173",
+        appId: "1:608282973173:web:a81ebc427e72138e72c6bc",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      //fazendo a chamada de login
+
+      //console que vai ser chamado antes da promisse
+      console.log("antes");
+      firebase
+        .auth()
+
+        //função para chamar o email e a senha, ela retorna uma promisse e é como essa função estivesse dizendo "Olha eu sei que voçe me chamou e prometo que eu vou retornar uma resposta"
+        .signInWithNameAndEmailAndTelefoneAndCidadeAndEstadoAndIdadeAndSexoAndMotivodocontatoAndAreadetexto(
+          "Nome",
+          "matheus@gmail.com",
+          "Telefone",
+          "Cidade",
+          "Estado",
+          "Idade",
+          "Sexo",
+          "Motivo do Contato",
+          "Area de Texto"
+        )
+        .then((response) => {
+          //quando chama e torna suceeso
+          console.log("success", response);
+        })
+
+        //caso ocorra erro na função, voce vai poder capturar esse ero
+        .catch((error) => {
+          //quando chama e da erro
+          console.log("error", error);
+        });
+
+      //console onde vai chamar depois da promisse
+      console.log("depois");
+    </script>
+  </body>
+</html>

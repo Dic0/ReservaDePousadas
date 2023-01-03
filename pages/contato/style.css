@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  background-color: #fff;
+  font-family: "Poppins";
+}
+i {
+  font-size: 2.4rem;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+
+}
+body::-webkit-scrollbar-thumb {
+  background-color:#e0e1e7;
+  border-radius: 20px;  
+}
+i {
+  font-size: 2.4rem;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  padding-block: 5rem;
+  background-color: #151823;
+  color: #666873;
+  margin-top: 5%;
+}
+.footer__container {
+  max-width: 116rem;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  row-gap: 2rem;
+}
+.footer__title {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__list-item {
+  list-style: none;
+}
+.footer__list-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s;
+}
+.footer__list-link:hover {
+  color: #fff;
+}
+
+.company__info {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-right: 5rem;
+}
+.company__logo {
+  color: #fff;
+}
+.company__info ul {
+  flex-direction: row;
+}
+.copyright {
+  margin-top: auto;
+}
+@media screen and (min-width: 40em) {
+  .company__info {
+    grid-column: span 2;
+  }
+}
+button,
+a {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  background: #19191c;
+  color: #f9f9f9;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0 0 0 16px;
+  }
+}
+
+.navbar-overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+body.open .navbar-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-overlay {
+    display: none;
+  }
+}
+
+.navbar-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-burger {
+    display: none;
+  }
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.navbar-menu {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  translate: -100% 0;
+  width: 270px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #000000;
+  visibility: hidden;
+  transition: translate 0.3s;
+}
+
+body.open .navbar-menu {
+  translate: 0 0;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-menu {
+    position: static;
+    translate: 0 0;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+  }
+}
+
+.navbar-menu > button {
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  padding: 0 8px;
+}
+
+.navbar-menu > button.active {
+  color: inherit;
+}
+.form {
+  position: relative;
+  width: 45rem;
+  padding: 10rem 0;
+  color: #fff;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
+  isolation: isolate;
+  margin-top: 8%;
+}
+.form .label{
+  font-weight: bold;
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(to left, #fc6767, #ec008c);
+  border-radius: 1rem 1rem 100% 100%;
+  z-index: -1;
+}
+
+.form__title {
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
+
+.form > form {
+  padding: 2.5rem;
+  background-color: inherit;
+}
+
+.form__input {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin: 0 auto;
+}
+
+.form__input > i {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #fc6767;
+}
+
+.form__input input,
+select,
+textarea,
+label {
+  position: relative;
+  width: 100%;
+  font: inherit;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  border: none;
+  outline: none;
+  color: #666873;
+}
+textarea {
+  background-color: #e9e4e4;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.form__input .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 1px;
+}
+
+.form__input .bar::before {
+  content: "";
+  position: absolute;
+  background-color: #fc6767;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.form__input > input:focus + .bar::before {
+  transform: scaleX(1);
+}
+
+.form__button {
+  display: block;
+  margin: 2.5rem auto 3rem;
+  padding: 1rem 5rem;
+  background: linear-gradient(to left, #fc6767, #ec008c);
+  color: #fff;
+  font: inherit;
+  border: 0.5rem solid #fff;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.form__button:hover {
+  background: linear-gradient(to right, #fc6767, #ec008c);
+}
+
+.form__switch {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #a1a1a1;
+}
+
+.form__switch a {
+  text-decoration: none;
+  color: #fc6767;
+}
+
+.form__switch a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  .form {
+   margin-top: 18%;
+  }
+  .form__title{
+    left: 49%;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 43.75em) {
+  .form::before {
+    height: 30rem;
+  }
+
+  .form__title {
+    left: 10rem;
+    transform: none;
+  }
+
+  .form > form {
+    transform: translateX(10rem);
+    border-radius: inherit;
+    box-shadow: inherit;
+  }
+}
